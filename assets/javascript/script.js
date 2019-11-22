@@ -2,11 +2,13 @@
 let hourMoment = moment().get('hour');
 
 
+
+
 calData.forEach(function (hour, i) {
     // console.log(calData[i].Time)
     $('#container').append(` 
     <div class="container" id="container">
-         <div class="row hour-row">
+         <div class="row hour-row" id="hourrow`+ i + `">
             <div class="time-block" id="timeblock`+ i + `">
                 `+ hour.Timestring + `
             </div>
@@ -37,6 +39,37 @@ calData.forEach(function (hour, i) {
         saveBtnEl.innerText = "Saved!"
         saveBtnEl.classList.add("saveBtnClicked")
     })
+
+    const hourRow = document.getElementById(`hourrow` + i);
+    hourRow.addEventListener("mouseover", function(){
+        timeEl.classList.add("hourRowMouseover");
+    })
+    hourRow.addEventListener("mouseout", function(){
+        timeEl.classList.remove("hourRowMouseover");
+    })
+
+
+    // container.onmouseover = container.onmouseout = handler;
+    // function handler(event) {
+
+    //     function str(el) {
+    //         if (!el) return "null"
+    //         return el.className || el.tagName;
+    //     }
+
+    //     log.value += event.type + ':  ' +
+    //         'target=' + str(event.target) +
+    //         ',  relatedTarget=' + str(event.relatedTarget) + "\n";
+    //     log.scrollTop = log.scrollHeight;
+
+    //     if (event.type == 'mouseover') {
+    //         timeEl.classList.add("hourRowMouseover");
+    //     }
+    //     if (event.type == 'mouseout') {
+    //         timeEl.classList.remove("hourRowMouseover");
+    //     }
+
+    // }
 
 
 

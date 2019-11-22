@@ -67,6 +67,14 @@ img {
     transition: all 0.9s;
 }
 
+.hourRowMouseover {
+  background-color: #3e8ca2;
+  color: #ecf1eb;
+  width: 13%;
+  transform: perspective(100px) rotatey(20deg);
+  transition: all 0.9s;
+}
+
 .content-block {
     height: 100%;
     width: 70%;
