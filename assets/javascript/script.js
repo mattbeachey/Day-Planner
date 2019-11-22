@@ -1,17 +1,25 @@
 
-const hourRowContainer = document.getElementById("container");
-const hourRowEl = document.createElement("div")
 
 
-//generating entire hour row element
-hourRowEl.setAttribute("class", "row")
-hourRowEl.append(hourRowContainer)
+calData.forEach(function (hour, i) {
+    console.log(hour)
+    $('#container').append(` 
+    <div class="container" id="container">
+         <div class="row hour-row">
+             <div class="time-block">
+                 9am
+             </div>
+             <div class="content-block">
+                 <textarea></textarea>
+             </div>
+             <div class="save-button">
+                 <img src="./assets/images/floppy-disk.svg" height="25px" width="25px">
+             </div>
+         </div>
+     </div>
+ `);
 
-//generating the time block element
-
-//generating the content block element
-
-//genating the save block element
+})
 
 
 
@@ -31,6 +39,8 @@ hourRowEl.append(hourRowContainer)
         //when unsaved content is in box, it displays this by changing color or something
             //IF content has been entered AND save hasn't been pressed, change class to "unsaved" - perhaps an icon appears on one side
             //If save button has been pushed AND there was content in data, display "saved!" (class="saved")
+        //color coding for time before, present, future
+            //use moment.js
 
         //actually saving/pulling the data
             //entire middle is input field, user types innertext, and app generates in same location from stored data
@@ -55,4 +65,7 @@ hourRowEl.append(hourRowContainer)
     //bonus - when you click on a specific hour (or hover over), it gets bigger/pops up?
     //bonus - button on top that says "My Day" that when clicked brings up an overview summary of anything inputted on the calendar
     //bonus - switch between days?
+
+
+
 
