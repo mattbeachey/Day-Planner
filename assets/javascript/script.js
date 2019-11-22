@@ -46,19 +46,21 @@ calData.forEach(function (hour, i) {
         setInterval(() => {
             timeLoop()
         }, 1000);
+
+        //this was originally outside of timeLoop - moved it in to see if it makes color update live
+        timeColorEl = hour.Time
+        hourMoment = moment().get('hour');
+        if (timeColorEl === hourMoment) {
+            timeEl.classList.add("time-block-present");
+        }
+        if (timeColorEl > hourMoment) {
+            timeEl.classList.add("time-block-future");
+        }
+        //////////////////////////////////////////////
     }
     timeLoop()
 
-    timeColorEl = hour.Time
-    hourMoment = moment().get('hour');
-    console.log (timeEl)
-    console.log(timeColorEl)
-    if (timeColorEl === hourMoment) {
-        timeEl.classList.add("time-block-present");
-    }
-    if (timeColorEl > hourMoment) {
-        timeEl.classList.add("time-block-future");
-    }
+
 
 })
 
