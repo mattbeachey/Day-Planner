@@ -1,3 +1,23 @@
+
+const hourRowContainer = document.getElementById("container");
+const hourRowEl = document.createElement("div")
+
+
+//generating entire hour row element
+hourRowEl.setAttribute("class", "row")
+hourRowEl.append(hourRowContainer)
+
+//generating the time block element
+
+//generating the content block element
+
+//genating the save block element
+
+
+
+
+
+
 //Create Time/Data Array
 //Create Loop for Pulling Data / Generating HTML for each hour
     //could just right everything (and test) for just one hour slot, then when working propogate with whole array
@@ -16,6 +36,8 @@
             //entire middle is input field, user types innertext, and app generates in same location from stored data
             //when save button clicked: IF there is data, send data to local storage
             //when block is refreshed: If local storage item = null, nothing, if something, convert to string and innerHTML
+            //when creating keys for each content box - make the key name somehting iterative like "[i]time data"
+            //input field has attribute called "value"
 
     //classes to make
         //saved / unsaved (save box itself and/or content box (data))

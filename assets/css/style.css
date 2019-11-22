@@ -1,12 +1,78 @@
+/* classes for future use */
+/* .unsaved 
+.saved */
+
+/* div {
+    border: 1px solid #ecf1eb;
+} */
+
+.container {
+    
+}
+
+.hour-row {
+    height: 80px;
+    width: 100%;
+    background-color:  #ecf1eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.time-block {
+    border-right: 3px solid #3e8ca2;
+    height: 80px;
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1%;  
+    color: #3e8ca2;  
+    font-size: 18px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /* background: rgb(62,140,162);
+    background: linear-gradient(90deg, rgba(62,140,162,1) 0%, rgba(146,189,197,1) 14%, rgba(236,241,235,1) 100%);     */
+}
+
+.content-block {
+    height: 80px;
+    width: 75%;
+}
+
+.save-button {
+    border-left: 3px solid #3e8ca2b6;
+    background-color: #89c8da;
+    height: 80px;
+    width: 10%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+@media screen and (max-width: 992px) {
+    .content-block {
+        width: 65%;
+    }
+    .save-button {
+        width: 20%;
+    }
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
-    /* background-color: #3e8ca2; */
-    /* color: #ecf1eb; */
+    background-color: #3e8ca2; 
   }
+
+
   
-  textarea{
+  /* textarea{
     background: transparent;
     border: none;
     resize: none;
@@ -71,4 +137,4 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
-  
+   */

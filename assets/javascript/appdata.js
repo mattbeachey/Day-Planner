@@ -2,39 +2,41 @@
 
 const calData = [
     {
-        Time: 9: 00,
+        Time: "9am",
         Content: ""
-    }
+    },
     {
-        Time: 10: 00,
+        Time: "10am",
         Content: ""
-    }
+    },
     {
-        Time: 11: 00,
+        Time: "11am",
         Content: ""
-    }
+    },
     {
-        Time: 12: 00,
+        Time: "12pm",
         Content: ""
-    }
+    },
     {
-        Time: 1: 00,
+        Time: "1pm",
         Content: ""
-    }
+    },
     {
-        Time: 2: 00,
+        Time: "2pm",
         Content: ""
-    }
+    },
     {
-        Time: 3: 00,
+        Time: "3pm",
         Content: ""
-    }
+    },
     {
-        Time: 4: 00,
+        Time: "4pm",
         Content: ""
-    }
+    },
     {
-        Time: 5: 00,
+        Time: "5pm",
         Content: ""
-    }
+    },
 ]
+
+console.log(calData)
