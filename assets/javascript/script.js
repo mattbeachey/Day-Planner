@@ -1,6 +1,6 @@
 
 let hourMoment = moment().get('hour');
-console.log(hourMoment)
+
 
 calData.forEach(function (hour, i) {
     // console.log(calData[i].Time)
@@ -49,15 +49,16 @@ calData.forEach(function (hour, i) {
     }
     timeLoop()
 
-    // timeColorEl = hour.Time
-    // hourMoment = moment().get('hour');
-    // console.log (timeEl)
-    // if (timeColorEl = 12) {
-    //     timeEl.classList.add("time-block-present");
-    // }
-    // if (timeColorEl > 12) {
-    //     timeEl.classList.add("time-block-future");
-    // }
+    timeColorEl = hour.Time
+    hourMoment = moment().get('hour');
+    console.log (timeEl)
+    console.log(timeColorEl)
+    if (timeColorEl === hourMoment) {
+        timeEl.classList.add("time-block-present");
+    }
+    if (timeColorEl > hourMoment) {
+        timeEl.classList.add("time-block-future");
+    }
 
 })
 
