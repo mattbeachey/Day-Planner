@@ -1,12 +1,13 @@
 
-
+let hourMoment = moment().get('hour');
+console.log(hourMoment)
 
 calData.forEach(function (hour, i) {
     // console.log(calData[i].Time)
     $('#container').append(` 
     <div class="container" id="container">
          <div class="row hour-row">
-            <div class="time-block">
+            <div class="time-block" id="timeblock`+ i + `">
                 `+ hour.Timestring + `
             </div>
              <div class="content-block">
@@ -18,24 +19,66 @@ calData.forEach(function (hour, i) {
          </div>
      </div>
  `);
-const saveBtnEl = document.getElementById(`saveBtn` + i);
-const contentEl = document.getElementById(`content` + i);
-let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
+    const saveBtnEl = document.getElementById(`saveBtn` + i);
+    const contentEl = document.getElementById(`content` + i);
+    const timeEl = document.getElementById(`timeblock` + i);
+    let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
 
 
-if (savedContent){
-    contentEl.value = savedContent;
+    if (savedContent) {
+        contentEl.value = savedContent;
+    }
+
+
+    saveBtnEl.addEventListener("click", function () {
+        let userInput = contentEl.value;
+        calData[i].content = userInput; //iterative value has been passed to userInput, hence no i on one side of this
+        localStorage.setItem("contentEl" + i, JSON.stringify(userInput));
+        saveBtnEl.innerText = "Saved!"
+        saveBtnEl.classList.add("saveBtnClicked")
+    })
+
+
+
+
+    function timeLoop() {
+        momentHour = moment().get('hour').toString();
+        setInterval(() => {
+            timeLoop()
+        }, 1000);
+    }
+    timeLoop()
+
+    timeColorEl = hour.Time
+    hourMoment = moment().get('hour');
+    console.log (timeEl)
+    if (timeColorEl = 12) {
+        timeEl.classList.add("time-block-present");
+    }
+    if (timeColorEl > 12) {
+        timeEl.classList.add("time-block-future");
+    }
+
+})
+
+
+//if time is less than moment value, past class
+//if time is equal to moment value, present class
+//if time is greater than moment value, future class
+
+
+
+
+
+function timeLoop() {
+    document.getElementById("timeanddate").innerText = moment().format('MMMM Do YYYY, h:mm:ss a').toString();
+    setInterval(() => {
+        timeLoop()
+    }, 1000);
 }
 
+timeLoop()
 
-saveBtnEl.addEventListener("click", function(){
-    let userInput = contentEl.value;
-    calData[i].content = userInput; //iterative value has been passed to userInput, hence no i on one side of this
-    localStorage.setItem("contentEl" + i, JSON.stringify(userInput));
-    saveBtnEl.innerText = "Saved!"
-    saveBtnEl.classList.add("saveBtnClicked")
-})
-})
 
 
 

@@ -6,13 +6,19 @@
     border: 1px solid #ecf1eb;
 } */
 
-.container {
+/* div {
+    border: 2px solid hotpink;
     
-}
+} */
 
 ::selection {
     background: #eba5a5;; /* WebKit/Blink Browsers */
   }
+
+img {
+    height: 25px;
+    width: 25px;
+}
 
 .hour-row {
     height: 80px;
@@ -39,18 +45,31 @@
     padding: 1%;  
     color: #3e8ca2;  
     font-size: 18px;
+    border-radius: 15px;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    border-radius: 15px;
     font-family: 'Tomorrow', sans-serif;   
+}
 
-    /* background: rgb(62,140,162);
-    background: linear-gradient(90deg, rgba(62,140,162,1) 0%, rgba(146,189,197,1) 14%, rgba(236,241,235,1) 100%);     */
+.time-block-present {
+    background-color: #a24d3e94;  
+}
+
+.time-block-future {
+    background-color: #3ea268c9;
+}
+
+.time-block:hover {
+    background-color: #3e8ca2;
+    color: #ecf1eb;
+    width: 13%;
+    transform: perspective(100px) rotatey(20deg);
+    transition: all 0.9s;
 }
 
 .content-block {
     height: 100%;
-    /* width: 75%; */
+    width: 70%;
     font-family: 'Tomorrow', sans-serif;   
 }
 
@@ -83,17 +102,16 @@
 
 
 @media screen and (max-width: 992px) {
-    /* .content-block {
-        width: 65%;
-    } */
-    .saveBtn {
-        width: 20%;
-    }
-    .saveBtn:hover {
-        width: 25%;
-    }
+
     .time-block {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .time-block {
+        font-size: 13px;
     }
 }
 
@@ -139,6 +157,17 @@ textarea{
 .otherfont2 {
     font-family: 'Tomorrow', sans-serif; 
     font-size: 26px;   
+}
+
+
+.timecont {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Tomorrow', sans-serif;  
+    font-size: 20px;
 }
 
   /*
