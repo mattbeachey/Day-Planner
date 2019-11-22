@@ -49,15 +49,15 @@ calData.forEach(function (hour, i) {
     }
     timeLoop()
 
-    timeColorEl = hour.Time
-    hourMoment = moment().get('hour');
-    console.log (timeEl)
-    if (timeColorEl = 12) {
-        timeEl.classList.add("time-block-present");
-    }
-    if (timeColorEl > 12) {
-        timeEl.classList.add("time-block-future");
-    }
+    // timeColorEl = hour.Time
+    // hourMoment = moment().get('hour');
+    // console.log (timeEl)
+    // if (timeColorEl = 12) {
+    //     timeEl.classList.add("time-block-present");
+    // }
+    // if (timeColorEl > 12) {
+    //     timeEl.classList.add("time-block-future");
+    // }
 
 })
 
