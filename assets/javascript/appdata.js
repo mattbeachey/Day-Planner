@@ -39,4 +39,3 @@ const calData = [
     },
 ]
 
-console.log(calData)

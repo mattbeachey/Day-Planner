@@ -2,13 +2,13 @@
 
 
 calData.forEach(function (hour, i) {
-    console.log(hour)
+    console.log(calData[i].Time)
     $('#container').append(` 
     <div class="container" id="container">
          <div class="row hour-row">
-             <div class="time-block">
-                 9am
-             </div>
+            <div class="time-block">
+                `+ hour.Time + `
+            </div>
              <div class="content-block">
                  <textarea></textarea>
              </div>
@@ -19,7 +19,10 @@ calData.forEach(function (hour, i) {
      </div>
  `);
 
+ 
+
 })
+
 
 
 
