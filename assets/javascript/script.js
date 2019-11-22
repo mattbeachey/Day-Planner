@@ -32,8 +32,8 @@ saveBtnEl.addEventListener("click", function(){
     let userInput = contentEl.value;
     calData[i].content = userInput; //iterative value has been passed to userInput, hence no i on one side of this
     localStorage.setItem("contentEl" + i, JSON.stringify(userInput));
-    console.log(userInput)
-
+    saveBtnEl.innerText = "Saved!"
+    saveBtnEl.classList.add("saveBtnClicked")
 })
 })
 
