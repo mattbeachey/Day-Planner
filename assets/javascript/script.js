@@ -2,25 +2,39 @@
 
 
 calData.forEach(function (hour, i) {
-    console.log(calData[i].Time)
+    // console.log(calData[i].Time)
     $('#container').append(` 
     <div class="container" id="container">
          <div class="row hour-row">
             <div class="time-block">
-                `+ hour.Time + `
+                `+ hour.Timestring + `
             </div>
              <div class="content-block">
-                 <textarea></textarea>
+                 <textarea id="content`+ i + `"></textarea>
              </div>
-             <div class="save-button">
+             <button class=saveBtn id="saveBtn`+ i + `">
                  <img src="./assets/images/floppy-disk.svg" height="25px" width="25px">
-             </div>
+             </button>
          </div>
      </div>
  `);
+const saveBtnEl = document.getElementById(`saveBtn` + i);
+const contentEl = document.getElementById(`content` + i);
+let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
 
- 
 
+if (savedContent){
+    contentEl.value = savedContent;
+}
+
+
+saveBtnEl.addEventListener("click", function(){
+    let userInput = contentEl.value;
+    calData[i].content = userInput; //iterative value has been passed to userInput, hence no i on one side of this
+    localStorage.setItem("contentEl" + i, JSON.stringify(userInput));
+    console.log(userInput)
+
+})
 })
 
 
