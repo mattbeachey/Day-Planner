@@ -48,7 +48,8 @@ img {
     border-radius: 15px;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    font-family: 'Tomorrow', sans-serif;   
+    font-family: 'Tomorrow', sans-serif; 
+    transition: all 0.9s;  
 }
 
 .time-block-present {
