@@ -48,12 +48,12 @@ calData.forEach(function (hour, i) {
         timeEl.classList.remove("hourRowMouseover");
     })
 
-    hourRow.addEventListener("touchstart", function(){
-        timeEl.classList.add("hourRowMouseover");
-    })
-    hourRow.addEventListener("touchcancel", function(){
-        timeEl.classList.remove("hourRowMouseover");
-    })
+    // hourRow.addEventListener("touchstart", function(){
+    //     timeEl.classList.add("hourRowMouseover");
+    // })
+    // hourRow.addEventListener("touchcancel", function(){
+    //     timeEl.classList.remove("hourRowMouseover");
+    // })
 
     // container.onmouseover = container.onmouseout = handler;
     // function handler(event) {
