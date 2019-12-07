@@ -81,27 +81,30 @@ calData.forEach(function (hour, i) {
 
 
     function timeLoop() {
-        momentHour = moment().get('hour').toString();
+        momentHour = moment().get('hour');
         setInterval(() => {
             timeLoop()
-        }, 1000);
+        }, 20000);
+        
 
         //this was originally outside of timeLoop - moved it in to see if it makes color update live
-        timeColorEl = hour.Time
+        timeColor = hour.Time
         hourMoment = moment().get('hour');
-        if (timeColorEl === hourMoment) {
+        if (timeColor === momentHour) {
             timeEl.classList.add("time-block-present");
         }
-        if (timeColorEl > hourMoment) {
+        if (timeColor > momentHour) {
             timeEl.classList.add("time-block-future");
         }
         //////////////////////////////////////////////
     }
     timeLoop()
+    
 
 
 
 })
+
 
 
 //if time is less than moment value, past class
@@ -113,13 +116,20 @@ calData.forEach(function (hour, i) {
 
 
 function timeLoop() {
-    document.getElementById("timeanddate").innerText = moment().format('MMMM Do YYYY, h:mm:ss a').toString();
+    document.getElementById("timeanddate").innerText = moment().format('MMMM Do YYYY, h:mm a').toString();
     setInterval(() => {
         timeLoop()
-    }, 1000);
+    }, 20000);
 }
 
 timeLoop()
+
+// function timeLoop() {
+//     document.getElementById("timeanddate").innerText = moment().format('MMMM Do YYYY, h:mm:ss a').toString();
+//     setInterval(() => {
+//         timeLoop()
+//     }, 1000);
+// }
 
 
 
